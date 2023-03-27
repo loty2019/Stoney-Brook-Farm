@@ -1,0 +1,138 @@
+body {
+  font-family: 'Goudy Bookletter 1911', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 50px;
+  margin-top: 20px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.slideshow1 {
+  display: flex;
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.slideshow2 {
+  display: flex;
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 20px;
+  float: right;
+}
+
+.image-container {
+  height: 100%;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.image-container img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.left {
+  animation-name: slideUpLeft;
+}
+
+.right {
+  animation-name: slideUpRight;
+}
+
+@keyframes slideUpLeft {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideUpRight {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.login-form h1 {
+  font-weight: 1;
+}
+
+.login-form input {
+  width: 200px;
+  padding: 8px;
+  margin: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  width: 200px;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.password-input {
+  display: flex;
+  align-items: center;
+}
+
+.password-input input {
+  width: 200px;
+  padding: 8px;
+  margin: 5px 0px 5px 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-input button {
+  height: 10px;
+  width: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
