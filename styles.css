@@ -1,78 +1,56 @@
 body {
   font-family: 'Goudy Bookletter 1911', sans-serif;
-  margin: 0;
-  padding: 0;
-  
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
 }
 
 .title {
   font-size: 50px;
+  font-size: 5vw;
   margin-top: 20px;
+  color: #222b36;
+  text-shadow: 3px 3px 0 rgb(180, 179, 179);
   flex-direction: column;
   display: flex;
+  opacity: 100%;
+  letter-spacing: 4px;
   align-items: center;
 }
-
-.slideshow1 {
-  display: flex;
-  overflow: hidden;
-  height: 200px;
-  margin-bottom: 20px;
-  float: left;
-}
-
-.slideshow2 {
-  display: flex;
-  overflow: hidden;
-  height: 200px;
-  margin-bottom: 20px;
-  float: right;
-}
-
-.image-container {
-  height: 100%;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.image-container img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.left {
-  animation-name: slideUpLeft;
-}
-
-.right {
-  animation-name: slideUpRight;
-}
-
-@keyframes slideUpLeft {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
+@media (min-width: 1200px) {
+  .title {
+    font-size: 60px;
   }
 }
 
-@keyframes slideUpRight {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
+.backImage {
+  background: url("Images/5.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 0.5}
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 3s;
+}
+
+@keyframes fadeOut {
+  from {opacity: 0.5} 
+  to {opacity: 0}
 }
 
 .login-form {
