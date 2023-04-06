@@ -1,6 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-  let index = 0;
+let index = 0;
   const images = [
     "Images/1.jpg",
     "Images/2.jpg",
@@ -31,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
     setTimeout(() => {
       backImage.classList.remove("fadeOut");
-      backImage.style.opacity = 0.5;
-    }, 8000);
+      backImage.style.opacity = 0.4;
+    }, 3000);
   }
   
   const backImage = document.querySelector(".backImage");
@@ -42,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 5000);
   
   setInterval(changeBackground, 8000);
-
+document.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.getElementById("submit");
   const nicknameInput = document.getElementById("nickname");
   const passwordInput = document.getElementById("password");
