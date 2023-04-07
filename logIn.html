@@ -8,21 +8,19 @@
   <link rel="icon" href="Images/JK logo.gif">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Goudy Bookletter 1911&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
   <div class="backImage fadeIn">
   </div>
   <div class="navbar">
-    <div class="navBarLeft">
-      <a href="page.html">Home</a>
-      <a href="page.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="navBarRight">
-      <a href="logIn.html" class="active">Login</a>
-      <a href="page.html">Register</a>
-    </div>
+    <a href="page.html">Home</a>
+    <a href="page.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="logIn.html" class="active">Login</a>
+    <a href="page.html">Register</a>
+  </div>
   </div>
   <div class="title">
     <P>STONY BROOK FARM</P>
@@ -31,23 +29,23 @@
 
   <div>
   </div>
-  <div class="sideLogos">
+  <div class="container">
     <div class="sideLogoLeft">
       <img src="Images/sideLogoLeft.png">
     </div>
     <div class="sideLogoRight">
       <img src="">
     </div>
-  </div>
-  <div class="login-form">
-    <h1>Welcome !</h1>
-    <input type="text" id="nickname" placeholder="Nickname">
-    <div class="password-input">
-      <input type="password" id="password" placeholder="Password">
-      <button id="hideUnhide">Show</button>
+    <div class="login-form">
+      <h1>Welcome !</h1>
+      <input type="text" id="nickname" placeholder="Nickname">
+      <div class="password-input">
+        <input type="password" id="password" placeholder="Password">
+        <i class="fa-solid fa-eye" id="eye"></i>
+      </div>
+      <button id="submit">Submit</button>
+      <p style="color: red;" id="error-message" style="font-family: 'Goudy Bookletter 1911', sans-serif;"></p>
     </div>
-    <button id="submit">Submit</button>
-    <p style="color: red;" id="error-message"></p>
   </div>
   <script src="scripts.js"></script>
 </body>

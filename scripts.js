@@ -1,4 +1,6 @@
-let index = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  // Background change
+  let index = 0;
   const images = [
     "Images/1.jpg",
     "Images/2.jpg",
@@ -9,38 +11,39 @@ let index = 0;
   ];
 
   function changeBackground() {
-    if (index == images.length-1) {
+    if (index == images.length - 1) {
       index = 0;
-    }else {
+    } else {
       index++;
     }
     const randomImage = images[index];
     const backImage = document.querySelector(".backImage");
-  
+
     backImage.style.backgroundImage = `url(${randomImage})`;
-    
+
     backImage.classList.remove("fadeOut");
     backImage.classList.add("fadeIn");
-    
+
     setTimeout(() => {
       backImage.classList.remove("fadeIn");
       backImage.classList.add("fadeOut");
     }, 5000);
-    
+
     setTimeout(() => {
       backImage.classList.remove("fadeOut");
       backImage.style.opacity = 0.4;
     }, 3000);
   }
-  
+
   const backImage = document.querySelector(".backImage");
 
   setTimeout(() => {
     backImage.classList.add("fadeOut");
   }, 5000);
-  
+
   setInterval(changeBackground, 8000);
-document.addEventListener("DOMContentLoaded", function () {
+
+  // Login form
   const submitBtn = document.getElementById("submit");
   const nicknameInput = document.getElementById("nickname");
   const passwordInput = document.getElementById("password");
@@ -60,16 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  displayPassword.addEventListener("click", function (event) {
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      displayPassword.innerText = "Hide";
-    } else {
-      passwordInput.type = "password";
-      displayPassword.innerText = "Show";
-    }
-  });
-
+  // event listener to handle password toggle
+  const eye = document.querySelector("#eye");
+  eye.addEventListener("click", function(){
+    this.classList.toggle("fa-eye-slash")
+    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
+    passwordInput.setAttribute("type", type)
+  })
+  
+  // submit button
   submitBtn.addEventListener("click", function (event) {
     const nickname = document.getElementById("nickname").value;
     const password = document.getElementById("password").value;
