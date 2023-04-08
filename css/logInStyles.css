@@ -1,6 +1,6 @@
 @font-face {
   font-family: plantStyle;
-  src: url('Fonts/Plante.ttf');
+  src: url('../Fonts/Plante.ttf');
 }
 
 .navbar {
@@ -26,7 +26,6 @@
 @media (min-width: 1200px) {
   .navbar a {
     font-size: 1vw;
-    
   }
 }
 
@@ -71,7 +70,7 @@ body {
 
 .title {
   font-family: plantStyle;
-  src: url('Fonts/Plante.ttf');
+  src: url('../Fonts/Plante.ttf');
   font-size: 7vw;
   display: flex;
   flex-wrap: wrap;
@@ -95,7 +94,7 @@ body {
 }
 
 .backImage {
-  background: url("Images/5.jpg");
+  background: url("../Images/5.jpg");
   opacity: 0.4;
   top: 0;
   left: 0;

@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Background change
   let index = 0;
   const images = [
-    "Images/1.jpg",
-    "Images/2.jpg",
-    "Images/3.jpg",
-    "Images/4.jpg",
-    "Images/5.jpg",
-    "Images/6.jpg",
+    "../Images/2.jpg",
+    "../Images/1.jpg",
+    "../Images/3.jpg",
+    "../Images/4.jpg",
+    "../Images/5.jpg",
+    "../Images/6.jpg",
   ];
 
   function changeBackground() {
@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("password").value;
 
     if (nickname === "Admin" && password === "Admin") {
-      window.location.href = "admin.html";
+      window.location.href = "../html/admin.html";
     } else if (nickname === "Laci" && password === "Keating") {
-      window.location.href = "my-stable.html";
+      window.location.href = "../html/my-stable.html";
     } else {
       errorMessage.innerText = "Invalid credentials. Please try again.";
     }
