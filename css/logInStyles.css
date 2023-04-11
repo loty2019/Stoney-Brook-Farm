@@ -3,7 +3,105 @@
   src: url('../Fonts/Plante.ttf');
 }
 
-.navbar {
+body {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, h3, a {
+  color: #34495e;
+}
+
+a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: plantStyle, sans-serif;;
+  margin: 0;
+  font-size: 2em;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+
+.logo a {
+  position: absolute;
+  padding: 5px 15px;
+  font-size: 1.1em;
+}
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: 0.99em;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.1em;
+  border: 1px solid #a2a2a2;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.main-nav a.active {
+  text-decoration: underline;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/*.navbar {
   display: flex;
   flex-wrap: nowrap;
   background-color: #4a4a4a;
@@ -13,7 +111,7 @@
   align-items: center;
 }
 
-/* Style the navigation bar links */
+
 .navbar a {
   font-size: large;
   display: flex;
@@ -36,41 +134,29 @@
   }
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Active/current link */
 .navbar a.active {
   background-color: #666;
   color: white;
 }
 
-/* Column container */
 .row {  
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
 .side {
   flex: 30%;
   padding: 20px;
-}
+} */
 
-body {
-  font-family: "Goudy Bookletter 1911", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .title {
   font-family: plantStyle;
-  src: url('../Fonts/Plante.ttf');
   font-size: 7vw;
   display: flex;
   flex-wrap: wrap;
@@ -164,7 +250,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ddd;
+  background-color: #f4f4f4;
   border-radius: 3vw;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 2vw;
