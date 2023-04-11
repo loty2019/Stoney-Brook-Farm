@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   // Background change
   let index = 0;
@@ -65,12 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // event listener to handle password toggle
   const eye = document.querySelector("#eye");
-  eye.addEventListener("click", function(){
-    this.classList.toggle("fa-eye-slash")
-    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
-    passwordInput.setAttribute("type", type)
-  })
-  
+  eye.addEventListener("click", function () {
+    this.classList.toggle("fa-eye-slash");
+    const type =
+      passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+  });
+
   // submit button
   submitBtn.addEventListener("click", function (event) {
     const nickname = document.getElementById("nickname").value;

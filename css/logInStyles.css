@@ -11,13 +11,14 @@ body {
 }
 
 .title {
-  font-family: plantStyle;
-  font-size: 7vw;
+  font-family: plantStyle, sans-serif;
+  font-size: 8vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   color: #4a4a4a;
+  font-weight: 1;
   text-shadow: 3px 3px 0 rgb(170, 168, 168);
   /*letter-spacing: 0.4vw;*/
 }

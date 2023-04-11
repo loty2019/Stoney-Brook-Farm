@@ -1,104 +1,216 @@
+/* Fonts */
 @font-face {
-    font-family: plantStyle;
-    src: url('../Fonts/Plante.ttf');
+  font-family: plantStyle;
+  src: url("../Fonts/Plante.ttf");
+}
+
+/* Reset styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Typography */
+h2,
+h3,
+a {
+  color: #34495e;
+}
+
+a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+/* Logo */
+.logo {
+  font-family: plantStyle, sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 2em;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.logo a {
+  font-size: 1.1em;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: 0.99em;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.main-nav a.active {
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0.1em;
+  border: 1px solid #a2a2a2;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1150px;
+}
+
+@media (min-width: 769px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em;
   }
-  
-  body {
-    font-family: "Goudy Bookletter 1911", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  h2, h3, a {
-    color: #34495e;
-  }
-  
-  a {
-    color: #4a4a4a;
-    text-decoration: none;
-  }
-  
-  .logo {
-    font-family: plantStyle, sans-serif;;
-    margin: 0;
-    font-size: 2em;
-  }
-  
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Hide navigation links */
   .main-nav {
-    margin-top: 5px;
+    display: none;
   }
-  
-  .logo a {
-    position: absolute;
-    padding: 5px 15px;
-    font-size: 1.1em;
-  }
-  .main-nav a {
-    padding: 10px 15px;
-    text-transform: uppercase;
-    text-align: center;
+
+  /* Show hamburger icon */
+  .hamburger {
     display: block;
   }
-  
-  .main-nav a {
-    color: #34495e;
-    font-size: 0.99em;
-  }
-  
-  .main-nav a:hover {
-    color: #718daa;
-  }
-  
-  .header {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.1em;
-    border: 1px solid #a2a2a2;
+
+  /* Show navigation links when hamburger is clicked */
+  .show-nav {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
     background-color: #f4f4f4;
-    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1;
   }
-  
-  .main-nav a.active {
-    text-decoration: underline;
+}
+
+/* Navigation links */
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: 0.99em;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.main-nav a.active {
+  text-decoration: underline;
+}
+
+/* Show navigation links */
+.show-nav {
+  display: flex !important;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 1.25em;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Hide navigation links */
+  .main-nav {
+    display: none;
   }
-  
-  /* ================================= 
-    Media Queries
-  ==================================== */
-  
-  @media (min-width: 769px) {
-    .header,
-    .main-nav {
-      display: flex;
-    }
-    .header {
-      flex-direction: column;
-      align-items: center;
-      .header {
-        width: 80%;
-        margin: 0 auto;
-        max-width: 1150px;
-      }
-    }
+
+  /* Show hamburger icon */
+  .hamburger {
+    display: block;
   }
-  
-  @media (min-width: 1025px) {
-    .header {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+
+  /* Show navigation links when hamburger is clicked */
+  .show-nav {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1;
   }
-  
-  
+}
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+
+/* Title */
+.title {
+  text-align: center;
+  margin-top: 2em;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+}
