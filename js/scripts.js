@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const mainNav = document.querySelector(".main-nav");
 
+
   hamburger.addEventListener("click", () => {
     mainNav.classList.toggle("show-nav");
   });
+
   // Background change
   let index = 0;
   const images = [
@@ -29,25 +31,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     backImage.classList.remove("fadeOut");
     backImage.classList.add("fadeIn");
-
+    
     setTimeout(() => {
       backImage.classList.remove("fadeIn");
       backImage.classList.add("fadeOut");
-    }, 5000);
+    }, 10000);
 
     setTimeout(() => {
       backImage.classList.remove("fadeOut");
       backImage.style.opacity = 0.4;
-    }, 3000);
+    }, 8000);
   }
 
   const backImage = document.querySelector(".backImage");
 
   setTimeout(() => {
     backImage.classList.add("fadeOut");
-  }, 5000);
+  }, 10000);
 
-  setInterval(changeBackground, 8000);
+  setInterval(changeBackground, 13000);
 
   // Login form
   const submitBtn = document.getElementById("submit");
