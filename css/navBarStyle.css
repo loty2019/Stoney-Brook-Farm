@@ -64,14 +64,11 @@ a {
   text-transform: uppercase;
   text-align: center;
   display: block;
+  position: relative;
 }
 
 .main-nav a:hover {
   color: #718daa;
-}
-
-.main-nav a.active {
-  text-decoration: underline;
 }
 
 /* Header */
@@ -89,7 +86,6 @@ a {
   -moz-border-radius: 5px;
   border-radius: 5px;
   width: 100%;
-  max-width: 1150px;
 }
 
 @media (min-width: 769px) {
@@ -112,7 +108,7 @@ a {
 @media (max-width: 768px) {
   /* Hide navigation links */
   .main-nav {
-    display: none;
+    display: none !important; 
   }
 
   /* Show hamburger icon */
@@ -133,6 +129,8 @@ a {
     text-align: center;
     z-index: 1;
   }
+
+
 }
 
 /* Navigation links */
@@ -146,71 +144,51 @@ a {
   margin: 0 10px;
 }
 
-.main-nav a {
-  color: #34495e;
-  font-size: 0.99em;
-  padding: 10px 15px;
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
+.main-nav a::before,
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  bottom: 0;
+  background-color: #718daa;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.6s ease-in-out;
 }
 
-.main-nav a:hover {
-  color: #718daa;
+.main-nav a::before {
+  left: 0;
+  transform-origin: left;
+}
+
+.main-nav a::after {
+  right: 0;
+  transform-origin: right;
+}
+
+.main-nav a:hover::before,
+.main-nav a:hover::after,
+.main-nav a.active::before,
+.main-nav a.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.main-nav a.active:hover::before,
+.main-nav a.active:hover::after {
+  transform: scaleX(0);
+}
+
+.main-nav:hover a.active::before,
+.main-nav:hover a.active::after {
+  transform: scaleX(0);
+  visibility: hidden;
 }
 
 .main-nav a.active {
-  text-decoration: underline;
-}
-
-/* Show navigation links */
-.show-nav {
-  display: flex !important;
-}
-
-/* Hamburger icon */
-.hamburger {
-  display: none;
-  position: absolute;
-  top: 1.25em;
-  right: 10px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  /* Hide navigation links */
-  .main-nav {
-    display: none;
-  }
-
-  /* Show hamburger icon */
-  .hamburger {
-    display: block;
-  }
-
-  /* Show navigation links when hamburger is clicked */
-  .show-nav {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 100%;
-    background-color: #f4f4f4;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1;
-  }
+  color: #718daa;
 }
 
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
-
-/* Title */
-.title {
-  text-align: center;
-  margin-top: 2em;
-  font-family: "Goudy Bookletter 1911", sans-serif;
-  font-size: 3em;
-  font-weight: bold;
-}

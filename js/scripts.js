@@ -1,5 +1,10 @@
-
 document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const mainNav = document.querySelector(".main-nav");
+
+  hamburger.addEventListener("click", () => {
+    mainNav.classList.toggle("show-nav");
+  });
   // Background change
   let index = 0;
   const images = [

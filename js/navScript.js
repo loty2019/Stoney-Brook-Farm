@@ -1,6 +1,10 @@
 const hamburger = document.querySelector('.hamburger');
-const mainNav = document.querySelector('.main-nav');
+const header = document.querySelector('.header');
+const title = document.querySelector('.title');
+const mainNavLinks = document.querySelectorAll('.main-nav a');
 
 hamburger.addEventListener('click', () => {
-  mainNav.classList.toggle('show-nav');
+  header.classList.toggle('show-nav');
+  title.classList.toggle('move-title');
+  mainNavLinks.forEach(link => link.classList.toggle('show-link'));
 });
