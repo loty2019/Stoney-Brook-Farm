@@ -100,7 +100,7 @@ a {
   }
 
   .main-nav li {
-    display: contents;
+    display: contents !important;
     margin: 0 10px;
   }
 
