@@ -203,7 +203,7 @@ a {
 .main-nav a::after {
   content: "";
   position: absolute;
-  width: 90%;
+  width: 85%;
   height: 2px;
   bottom: 0;
   background-color: #718daa;
