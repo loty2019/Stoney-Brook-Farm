@@ -85,7 +85,7 @@ a {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  width: 100%;
+  width: auto;
 }
 
 @media (min-width: 769px) {
@@ -93,6 +93,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5em;
+    width: auto;
   }
 }
 
@@ -100,9 +101,11 @@ a {
 .hamburger {
   display: none;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 14px;
+  right: 20px;
   cursor: pointer;
+  font-size: 1.6em;
+  color: #34495e;
 }
 
 @media (max-width: 768px) {
@@ -123,11 +126,12 @@ a {
     position: absolute;
     top: 50px;
     right: 0;
-    width: 100%;
+    width: 90%;
     background-color: #f4f4f4;
     padding: 10px 0;
     text-align: center;
     z-index: 1;
+    width: 7em;
   }
 
 
