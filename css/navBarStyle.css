@@ -100,8 +100,8 @@ a {
   }
 
   .main-nav li {
+    display: contents;
     margin: 0 10px;
-    display: block;
   }
 
   .hamburger {
