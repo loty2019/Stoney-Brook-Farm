@@ -51,10 +51,12 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  list-style: none;
 }
 
 .main-nav li {
   margin: 0 10px;
+  display: block;
 }
 
 .main-nav a {
@@ -88,12 +90,22 @@ a {
   width: auto;
 }
 
+/* Not Mobile */
 @media (min-width: 769px) {
   .header {
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5em;
     width: auto;
+  }
+
+  .main-nav li {
+    margin: 0 10px;
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
   }
 }
 
@@ -106,14 +118,57 @@ a {
   cursor: pointer;
   font-size: 1.6em;
   color: #34495e;
+  transition: transform 0.4s ease;
 }
 
+.hamburger.active .line-1 {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .line-2 {
+  opacity: 0;
+}
+
+.hamburger.active .line-3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.line-1, .line-2, .line-3 {
+  width: 30px;
+  height: 3px;
+  background-color: #34495e;
+  margin: 5px 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.line-1 {
+  transform-origin: center center;
+  transform: rotate(0);
+}
+
+.line-2 {
+  transform-origin: center center;
+  transform: rotate(0);
+}
+
+.line-3 {
+  transform-origin: center center;
+  transform: rotate(0);
+}
+
+/* For Mobile */
 @media (max-width: 768px) {
+  
   /* Hide navigation links */
   .main-nav {
-    display: none !important; 
+    display: none !important;
   }
 
+  .main-nav li {
+    margin: 0 10px;
+    opacity: 0; 
+    transition: all 0.4s ease-in-out; 
+  }
   /* Show hamburger icon */
   .hamburger {
     display: block;
@@ -125,28 +180,24 @@ a {
     flex-direction: column;
     position: absolute;
     top: 50px;
-    right: 0;
+    right: 10px;
     width: 90%;
-    background-color: #f4f4f4;
     padding: 10px 0;
     text-align: center;
     z-index: 1;
     width: 7em;
+    border: 1px solid #a2a2a2;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
-
-
 }
 
 /* Navigation links */
-.main-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.main-nav li {
-  margin: 0 10px;
-}
 
 .main-nav a::before,
 .main-nav a::after {
