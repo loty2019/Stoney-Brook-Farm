@@ -36,6 +36,16 @@ body {
   }
 }
 
+@media (max-width: 414px) {
+  .title{
+    display: none;
+  }
+
+  .container {
+    padding-top: 50%;
+  }
+}
+
 .backImage {
   background: url("../Images/5.jpg");
   opacity: 0.4;
@@ -88,8 +98,8 @@ body {
   margin: 2em 0;
   background-color: rgba(255, 255, 255, 0.295);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 3vw;
+  backdrop-filter: blur(0.6em);
+  border-radius: 2em;
   padding: 2vw;
   width: 80vw;
   max-width: 300px;

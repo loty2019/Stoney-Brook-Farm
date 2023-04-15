@@ -122,7 +122,7 @@ a {
 }
 
 .hamburger.active .line-1 {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(47deg);
 }
 
 .hamburger.active .line-2 {
@@ -130,7 +130,7 @@ a {
 }
 
 .hamburger.active .line-3 {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-47deg);
 }
 
 .line-1, .line-2, .line-3 {
@@ -157,13 +157,20 @@ a {
 }
 
 /* For Mobile */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   
   /* Hide navigation links */
   .main-nav {
     display: none !important;
   }
+  
+  .header {
+    flex-direction: row;
+  }
 
+  .logo a{
+    padding: 0 0 0 1px;
+  }
   .main-nav li {
     margin: 0 10px;
     opacity: 0; 
