@@ -55,24 +55,24 @@
         </svg>
       </div>
       <form action="#" method="post" id="contact_form">
-        <div class="name">
+        <div class="first name">
           <label for="name"></label>
-          <input type="text" placeholder="My name is" name="name" id="name_input" required>
+          <input type="text" class="form-control" placeholder="Name" name="Name" id="name_input" required>
+        </div>
+        <div class="last_name">
+          <label for="name"></label>
+          <input type="text" class="form-control" name="Last&nbsp;Name" placeholder="Last Name" name="Name" id="lastname_input" required>
         </div>
         <div class="email">
           <label for="email"></label>
-          <input type="email" placeholder="My last name is" name="email" id="email_input" required>
-        </div>
-        <div class="telephone">
-          <label for="name"></label>
-          <input type="text" placeholder="My e-mail is" name="telephone" id="telephone_input" required>
+          <input type="email" class="form-control" placeholder="Email" name="email" id="email_input" required>
         </div>
         <div class="message">
           <label for="message"></label>
-          <textarea name="message" placeholder="My Message is" id="message_input" cols="30" rows="5" required></textarea>
+          <textarea name="message" placeholder="Message" id="message_input" cols="30" rows="5" required></textarea>
         </div>
         <div class="submit">
-          <input type="submit" value="Send" id="form_button" />
+          <input type="submit" class="btn btn-primary" value="Send" id="form_button">
         </div>
       </form>
     </div>
