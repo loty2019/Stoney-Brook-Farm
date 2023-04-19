@@ -4,6 +4,8 @@
   src: url("../Fonts/Plante.ttf");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+
 /* Reset styles */
 body {
   margin: 0;
@@ -252,5 +254,3 @@ a {
   color: #718daa;
 }
 
-/* Font */
-@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
