@@ -6,3 +6,4 @@ Horse Barn management system and standard informational website. The final proje
 
 - smaller navnbar underline
 - cantact page horses add html and appear only on mobile view on top
+- fix hamburger for the contact html
