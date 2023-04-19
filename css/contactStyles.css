@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
 
 html {
   font-family: "Goudy Bookletter 1911", sans-serif;
@@ -32,12 +33,12 @@ textarea {
   overflow: auto;
 }
 
-#container {
+.container {
   border: solid 3px #474544;
   max-width: 768px;
   margin: 40px auto;
   position: relative;
-  padding: 1em 1em 1em 1em;
+  padding: 1em 2em 2em 2em;
 }
 
 form {
@@ -52,6 +53,7 @@ h1 {
   letter-spacing: 7px;
   text-align: center;
   text-transform: uppercase;
+  width: max-content;
 }
 
 .underline {
@@ -63,7 +65,7 @@ h1 {
 .icon_wrapper {
   margin: 30px auto 0;
   width: 100%;
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 .icon {
@@ -72,6 +74,21 @@ h1 {
   height: 50px;
   margin: 0 auto;
   width: 50px;
+}
+
+/* page wrapper */
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* page image */
+.page img {
+  margin: 5vh auto;
+  height: 100%;
+  width: 50%;
 }
 
 .email {
@@ -87,19 +104,18 @@ input[type='text'], [type='email'], select, textarea {
   font-weight: 400;
   letter-spacing: 1px;
 	margin: 0em 0 1.875em 0;
-	padding: 0 0 0.875em 0;
-  text-transform: uppercase;
+	padding: 0 0 0 1em 0;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
-	-webkit-transition: all 0.7s;
-	-moz-transition: all 0.7s;
-	-ms-transition: all 0.7s;
-	-o-transition: all 0.7s;
-	transition: all 0.7s;
+	-webkit-transition: all  1s;
+	-moz-transition: all  1s;
+	-ms-transition: all  1s;
+	-o-transition: all 1s;
+	transition: all  1s;
 }
 
 input[type='text']:focus, [type='email']:focus, textarea:focus {
@@ -107,6 +123,9 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 	padding: 0 0 0.875em 0;
 }
 
+textarea:focus {
+  background-color: #e9e9e9;
+}
 .message {
 	float: none;
 }
@@ -126,10 +145,6 @@ select::-ms-expand {
 }
 
 .subject {
-  width: 100%;
-}
-
-.telephone {
   width: 100%;
 }
 
