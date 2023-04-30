@@ -1,7 +1,12 @@
+/* Header */
+
 @font-face {
   font-family: plantStyle;
   src: url('../Fonts/Plante.ttf');
 }
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+
+/* Body */
 
 body {
   font-family: "Goudy Bookletter 1911", sans-serif;
@@ -20,30 +25,8 @@ body {
   margin: 0;
   color: #4a4a4a;
   font-weight: 1;
-  text-shadow:0.04em 0.04em 0 rgb(170, 168, 168);
+  text-shadow:0.04em 0.04em 2px rgb(170, 168, 168);
   /*letter-spacing: 0.4vw;*/
-}
-
-@media (min-width: 1200px) {
-  .title {
-    font-size: 7vw;
-  }
-}
-
-@media (max-width: 700px) {
-  .title {
-    font-size: 9vw;
-  }
-}
-
-@media (max-width: 414px) {
-  .title{
-    display: none;
-  }
-
-  .container {
-    padding-top: 50%;
-  }
 }
 
 .backImage {
@@ -62,21 +45,6 @@ body {
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 4s;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 0.4}
-}
-
-.fadeOut {
-  animation-name: fadeOut;
-  animation-duration: 4s;
-}
-
-@keyframes fadeOut {
-  from {opacity: 0.4} 
-  to {opacity: 0}
 }
 
 .container {
@@ -116,16 +84,7 @@ body {
   color: #4a4a4a;
   backdrop-filter: none;
   text-transform: uppercase;
-}
-
-.login-form input {
-  width: 200px;
-  padding: 8px;
-  margin: 5px;
-  outline: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  backdrop-filter: none;
+  margin-bottom: 1em;
 }
 
 .login-form button {
@@ -141,21 +100,42 @@ body {
 	transition: outline-offset .25s;
   backdrop-filter: none;
 }
+
 .login-form button:hover,
 .login-form button:focus{
   background-color: #409cff;
   outline-color: #409cff;
 	outline-offset: 3px;
 }
+
 .login-form button:is(:hover, :focus){
 	outline-offset: 3px;
 }
-
 
 .login-form button:not(:hover):focus {
   outline: none;
   transition: outline 0.3s;
   outline-offset: 0;
+}
+
+.login-form input {
+	background: none;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  border: none;
+	border-bottom: solid 2px #474544;
+	color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0 1em 0;
+  width: 13em;
+	transition: all  1s;
+}
+
+.login-form input:focus {
+  outline: none;
+  background-color: #eaeaea;
 }
 
 .password-input {
@@ -164,17 +144,48 @@ body {
   flex-wrap: wrap;
 }
 
-.password-input input {
-  width: 200px;
-  padding: 8px;
-  margin: 5px;
-  outline: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 .fa-eye{
   margin-left: -30px;
+  margin-top: -30px;
   cursor: pointer;
-  color: lightgray;
+  color: rgb(150, 150, 150);
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 7vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .title{
+    display: none;
+  }
+
+  .container {
+    padding-top: 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 0.4}
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 4s;
+}
+
+@keyframes fadeOut {
+  from {opacity: 0.4} 
+  to {opacity: 0}
 }
